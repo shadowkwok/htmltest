@@ -1,0 +1,38 @@
+<label><input type='checkbox'>2x2x2</label><br>
+<label><input type='checkbox'>3x3x3</label><br>
+<label><input type='checkbox'>4x4x4</label><br>
+<label><input type='checkbox' onclick='handleClick();' id = '5'>5x5x5</label><br>
+<label><input type='checkbox'>SQ1</label><br>
+<label><input type='checkbox' onclick='handleClick();' id = 'mega'>Mega</label><br>
+<label><input type='checkbox'>Pry</label><br>
+
+<script text="Javascript">
+function handleClick() {
+	var _5 = document.getElementById("5");
+	var mega = document.getElementById("mega");
+
+	if (_5.checked == true)
+	{
+		mega.checked = false;
+		mega.disabled = true;
+	}
+
+	if (mega.checked == true)
+	{
+		_5.checked = false;
+		_5.disabled = true;
+	}
+
+	if (_5.checked == false && mega.checked == false)
+	{
+		_5.disable = false;
+		mega.disabled = false;
+	}
+
+
+
+
+}
+
+
+</script>
